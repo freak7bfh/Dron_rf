@@ -21,6 +21,9 @@
 #include "math.h"
 
 
+uint16_t test1 = 0x00;
+
+
 volatile uint8_t RxIndeksRS=0;
 volatile uint8_t RxBufRS[RS_BUFF];
 volatile uint8_t systick_leds=0;
