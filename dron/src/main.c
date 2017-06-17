@@ -20,8 +20,7 @@
 #include "lis3dh.h"
 #include "math.h"
 
-
-uint16_t test1 = 0x00;
+uint16_t test2 = 0x00; // zmiana
 
 
 volatile uint8_t RxIndeksRS=0;
