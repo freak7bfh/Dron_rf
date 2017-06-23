@@ -20,8 +20,6 @@
 #include "lis3dh.h"
 #include "math.h"
 
-uint16_t test2 = 0x00; // zmiana
-
 
 volatile uint8_t RxIndeksRS=0;
 volatile uint8_t RxBufRS[RS_BUFF];
@@ -51,7 +49,9 @@ uint8_t test_val=0;
 
 int main(){
 
-	RCCInit();
+	//RCCInit();
+	SystemInit();
+
 	USARTInit();
 //
 	_puts("\x1b[2J\x1b[H");  // clear terminal
@@ -114,8 +114,7 @@ int main(){
 //	/* set write single command. Attention: command must be 0x3F at most */
 //	#define SET_WRITE_SINGLE_CMD(x)			(x & (~(0xC0)))
 //	/* set write multiple command. Attention: command must be 0x3F at most */
-//	#define SET_WRITE_MULTI_CMD(x)			(x & (~(0x80))	\
-											 x |= 0x40)
+//	#define SET_WRITE_MULTI_CMD(x)			(x & (~(0x80)) x |= 0x40)
 
 //	while(1){
 //		SPI_SendData8(SPI1, 0x0f);
